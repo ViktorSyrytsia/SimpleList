@@ -42,26 +42,29 @@ export default class App extends Component {
         })
     }
 
-    onToggleImportant = (id) => {
-        this.setState(({ data }) => {
-            const index = data.findIndex(element => element.id === id);
-            const newPost = { ...data[index], important: !data[index].important };
-            const newArray = [...data.slice(0, index), newPost, ...data.slice(index + 1)];
-            return {
-                data: newArray
-            }
-        })
+    onToggle = (id, action) => {
+        if (action === 'like') {
+            this.setState(({ data }) => {
+                const index = data.findIndex(element => element.id === id);
+                const newPost = { ...data[index], like: !data[index].like };
+                const newArray = [...data.slice(0, index), newPost, ...data.slice(index + 1)];
+                return {
+                    data: newArray
+                }
+            })
+        } else {
+            this.setState(({ data }) => {
+                const index = data.findIndex(element => element.id === id);
+                const newPost = { ...data[index], important: !data[index].important };
+                const newArray = [...data.slice(0, index), newPost, ...data.slice(index + 1)];
+                return {
+                    data: newArray
+                }
+            })
+        }
     }
-    onToggleLiked = (id) => {
-        this.setState(({ data }) => {
-            const index = data.findIndex(element => element.id === id);
-            const newPost = { ...data[index], like: !data[index].like };
-            const newArray = [...data.slice(0, index), newPost, ...data.slice(index + 1)];
-            return {
-                data: newArray
-            }
-        })
-    }
+
+
     searchPost = (items, term) => {
         if (term.length === 0) {
             return items
@@ -113,8 +116,7 @@ export default class App extends Component {
                 <PostList
                     posts={visablePost}
                     onDelete={this.deleteItem}
-                    onToggleImportant={this.onToggleImportant}
-                    onToggleLiked={this.onToggleLiked}
+                    onToggle={this.onToggle}
                 />
                 <PostAddForm onAddItem={this.addItem} />
             </div>

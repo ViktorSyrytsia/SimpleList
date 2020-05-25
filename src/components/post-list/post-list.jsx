@@ -6,7 +6,7 @@ import PostListItem from '../post-list-item';
 import './post-list.scss';
 
 
-export default function PostList({ posts, onDelete, onToggleImportant, onToggleLiked }) {
+export default function PostList({ posts, onDelete, onToggle }) {
     return (
         <ListGroup className="post-list">
             {posts.map((post) => {
@@ -18,8 +18,8 @@ export default function PostList({ posts, onDelete, onToggleImportant, onToggleL
                         label={label}
                         important={important}
                         onDelete={() => onDelete(id)}
-                        onToggleImportant={() => onToggleImportant(id)}
-                        onToggleLiked={() => onToggleLiked(id)}
+                        onToggleImportant={() => onToggle(id, 'imp')}
+                        onToggleLiked={() => onToggle(id, 'like')}
                     />
                 )
             })}
