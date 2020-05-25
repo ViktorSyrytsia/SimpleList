@@ -1,0 +1,18 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.app-header {
+  padding: 10px;
+
+  &-title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  &-counter {
+    margin-top: 10px;
+  }
+}

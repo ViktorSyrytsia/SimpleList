@@ -1,0 +1,46 @@
+.btn-group {
+  flex-basis: 300px;
+  margin-right: 30px;
+}
+.btnOne {
+  outline: none;
+  width: 50px;
+  font-weight: bold;
+  font-size: 12px;
+  height: 38px;
+  margin-left: 5px;
+  border-style: none;
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  border: 1px solid rgb(82, 82, 82);
+  border-radius: 5px;
+  background: linear-gradient(315deg, #515151, #444444);
+  box-shadow: -1px -1px 2px #414141, 1px 1px 2px #575757;
+  transition: 0.2s;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btnTwo {
+  outline: none;
+  width: 50px;
+  font-weight: bold;
+  font-size: 12px;
+  height: 38px;
+  margin-left: 5px;
+  border-style: none;
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  border-radius: 3px;
+  background: linear-gradient(315deg, #303030, #393939);
+  box-shadow: -3px -3px 6px #2b2b2b, 3px 3px 6px #3f3f3f;
+  transition: 0.2s;
+  &:hover {
+    background: linear-gradient(315deg, #303030, #393939);
+    box-shadow: -6px -6px 12px #2b2b2b, 6px 6px 12px #3f3f3f;
+  }
+  &:focus {
+    outline: none;
+  }
+}

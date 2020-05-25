@@ -1,0 +1,100 @@
+.app-list-item {
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &-label {
+    flex-basis: 85%;
+    border-radius: 3px;
+    background: linear-gradient(315deg, #303030, #393939);
+    box-shadow: -2px -2px 4px #2b2b2b, 2px 2px 4px #3f3f3f;
+    height: 100%;
+    line-height: 35px;
+    margin-right: 5px;
+  }
+}
+
+.btn-star {
+  margin-right: 5px;
+  height: 75%;
+  flex-basis: 5%;
+  font-weight: bold;
+  font-size: 12px;
+  border-style: none;
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  border-radius: 3px;
+  background: linear-gradient(315deg, #303030, #393939);
+  box-shadow: -2px -2px 4px #2b2b2b, 2px 2px 4px #3f3f3f;
+  transition: 0.2s;
+  &:hover {
+    background: linear-gradient(315deg, #303030, #393939);
+    box-shadow: -4px -4px 8px #2b2b2b, 4px 4px 8px #3f3f3f;
+    color: gold;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-trash {
+  margin-right: 5px;
+  height: 75%;
+  flex-basis: 5%;
+  font-weight: bold;
+  font-size: 12px;
+  border-style: none;
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  border-radius: 3px;
+  background: linear-gradient(315deg, #303030, #393939);
+  box-shadow: -2px -2px 4px #2b2b2b, 2px 2px 4px #3f3f3f;
+  transition: 0.2s;
+  &:hover {
+    background: linear-gradient(315deg, #303030, #393939);
+    box-shadow: -4px -4px 8px #2b2b2b, 4px 4px 8px #3f3f3f;
+    color: cornflowerblue;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-heart {
+  margin-right: 5px;
+  height: 75%;
+  flex-basis: 5%;
+  font-weight: bold;
+  font-size: 12px;
+  border-style: none;
+  background-color: rgb(53, 53, 53);
+  cursor: pointer;
+  border-radius: 3px;
+  background: linear-gradient(315deg, #303030, #393939);
+  box-shadow: -2px -2px 4px #2b2b2b, 2px 2px 4px #3f3f3f;
+  transition: 0.2s;
+  &:hover {
+    background: linear-gradient(315deg, #303030, #393939);
+    box-shadow: -4px -4px 8px #2b2b2b, 4px 4px 8px #3f3f3f;
+    color: crimson;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.important {
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 1px 1px 2px grey;
+}
+
+.liked {
+  color: crimson;
+}
+.gold {
+  color: gold;
+}
